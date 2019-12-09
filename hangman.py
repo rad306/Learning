@@ -1,3 +1,5 @@
+'Rules are based on the HyperSkill Project'
+
 import random
 wlist = ['python', 'java', 'kotlin', 'javascript']
 choice = random.choice(wlist)
@@ -24,15 +26,15 @@ while True:
 
       print()
       print(''.join(blank))
-      
+
       guess = input('Input a letter: ')
 
       if guess in used:
         print('You already typed this letter')
 
       elif len(guess) != 1:
-        print('You should print a single letter')  
-      
+        print('You should print a single letter')
+
       elif not (guess.isascii() and guess.islower()):
         print('It is not an ASCII lowercase letter')
 
@@ -40,9 +42,9 @@ while True:
         for i in range(word_length):
           if choice[i] == guess:
             blank[i] = guess
-        used.append(guess)  
+        used.append(guess)
 
-      else: 
+      else:
           print('No such letter in the word')
           used.append(guess)
           lives -= 1
